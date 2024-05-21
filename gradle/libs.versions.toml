@@ -1,0 +1,38 @@
+[versions]
+
+appCompat = { strictly = "1.6.1" }
+constraintLayout = { strictly = "2.1.4" }
+core = { strictly = "1.13.1" }
+dagger = { strictly = "2.50" }
+dataStore = { strictly = "1.1.1" }
+kotlin = { strictly = "1.9.20" }
+kotlinxCoroutines = { strictly = "1.7.3" }
+kotlinxSerialization = { strictly = "1.6.0" }
+material = { strictly = "1.12.0" }
+okHttp = { strictly = "4.12.0" }
+retrofit = { strictly = "2.9.0" }
+retrofitSerialization = { strictly = "1.0.0" }
+room = { strictly = "2.6.1" }
+
+[libraries]
+
+androidxDatastore = { module = "androidx.datastore:datastore-preferences", version.ref = "dataStore" }
+appCompat = { module = "androidx.appcompat:appcompat", version.ref = "appCompat" }
+constraintLayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintLayout" }
+coreKtx = { module = "androidx.core:core-ktx", version.ref = "core" }
+dagger = { module = "com.google.dagger:dagger", version.ref = "dagger" }
+daggerCompiler = { module = "com.google.dagger:dagger-compiler", version.ref = "dagger" }
+kotlinxCoroutinesAndroid = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutines" }
+kotlinxCoroutinesCore = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
+kotlinxSerializationJson = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
+kotlinReflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
+material = { module = "com.google.android.material:material", version.ref = "material" }
+okHttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okHttp" }
+okHttpLoggingInterceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "okHttp" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+retrofitAdapterRxJava = { module = "com.squareup.retrofit2:adapter-rxjava2", version.ref = "retrofit" }
+retrofitConverterGson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
+retrofitKotlinSerialization = { module = "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter", version.ref = "retrofitSerialization" }
+roomCompiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+roomKtx = { module = "androidx.room:room-ktx", version.ref = "room" }
+roomRuntime = { module = "androidx.room:room-runtime", version.ref = "room" }

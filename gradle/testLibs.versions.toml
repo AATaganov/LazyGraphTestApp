@@ -1,0 +1,11 @@
+[versions]
+
+junit = "4.13.2"
+junitAndroidRunner = "1.1.5"
+robolectric = "4.11.1"
+
+[libraries]
+
+junit = { module = "junit:junit", version.ref = "junit" }
+junitAndroidRunner = { module = "androidx.test.ext:junit", version.ref = "junitAndroidRunner" }
+robolectric = { module = "org.robolectric:robolectric", version.ref = "robolectric" }
