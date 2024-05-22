@@ -6,11 +6,13 @@ import android.os.Bundle
 import android.os.Parcelable
 import androidx.appcompat.app.AppCompatActivity
 import lazy.initialization.examples.databinding.ActivityExampleScreenBinding
+import lazy.initialization.examples.exampleScreen.di.LazyComponentsComponent
+import lazy.initialization.examples.exampleScreen.di.buildLazyComponentsComponent
 import lazy.initialization.examples.exampleScreen.di.LazyGraphComponent
+import lazy.initialization.examples.exampleScreen.di.LazyVmComponent
 import lazy.initialization.examples.exampleScreen.di.SyncComponent
 import lazy.initialization.examples.exampleScreen.di.buildLazyGraphComponent
 import lazy.initialization.examples.exampleScreen.di.buildSyncComponent
-import lazy.initialization.examples.exampleScreen.di.LazyVmComponent
 import lazy.initialization.examples.exampleScreen.di.buildLazyVmComponent
 import lazy.initialization.examples.measure
 import javax.inject.Inject
@@ -39,6 +41,10 @@ internal class ExampleScreen : AppCompatActivity() {
         buildLazyGraphComponent(application)
     }
 
+    private val lazyComponentsComponent: LazyComponentsComponent by lazy(LazyThreadSafetyMode.NONE) {
+        buildLazyComponentsComponent()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(viewBinding.root)
@@ -62,6 +68,7 @@ internal class ExampleScreen : AppCompatActivity() {
             InjectStrategy.SYNC -> syncComponent.inject(this)
             InjectStrategy.LAZY_VM -> lazyVmComponent.inject(this)
             InjectStrategy.LAZY_GRAPH -> lazyGraphComponent.inject(this)
+            InjectStrategy.LAZY_COMPONENTS -> lazyComponentsComponent.inject(this)
         }
     }
 

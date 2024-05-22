@@ -11,4 +11,5 @@ internal enum class InjectStrategy : Parcelable {
     SYNC,
     LAZY_VM,
     LAZY_GRAPH,
+    LAZY_COMPONENTS,
 }
